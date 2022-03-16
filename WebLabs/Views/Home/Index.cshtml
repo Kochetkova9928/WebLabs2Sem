@@ -2,22 +2,22 @@
     ViewData["Title"] = "Home Page";
 }
 
-<h1>Calc Services</h1>
+<h1>Form parameters parsing demo</h1>
 
 <div class="list-group">
-    <a asp-controller="CalcService" asp-action="PassUsingModel" class="list-group-item list-group-item-action">
-        Using Model Calc
+    <a asp-controller="Calc" asp-action="ManualSingle" class="list-group-item list-group-item-action">
+        Manual parsing in single action
     </a>
 
-    <a asp-controller="CalcService" asp-action="PassUsingViewData" class="list-group-item list-group-item-action">
-        Using ViewData Calc
+    <a asp-controller="Calc" asp-action="ManualSeparate" class="list-group-item list-group-item-action">
+        Manual parsing in separate action
     </a>
 
-    <a asp-controller="CalcService" asp-action="PassUsingViewBag" class="list-group-item list-group-item-action">
-        Using ViewBag Calc
+    <a asp-controller="Calc" asp-action="ModelParameters" class="list-group-item list-group-item-action">
+        Model binding (parameters)
     </a>
 
-    <a asp-controller="CalcService" asp-action="AccessServiceDirectly" class="list-group-item list-group-item-action">
-        Using Service Injection Calc
+    <a asp-controller="Calc" asp-action="ModelSeparate" class="list-group-item list-group-item-action">
+        Model binding (separate model)
     </a>
 </div>

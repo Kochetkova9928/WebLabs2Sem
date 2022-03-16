@@ -1,0 +1,25 @@
+﻿@model WebLabs.Models.CalcModel
+@{
+    ViewData["Title"] = "Model Parameters";
+}
+
+<form asp-controller="Calc" asp-action="ModelParameters" method="post">
+    <label><h1>ModelBindingInParameters</h1></label>
+    <div class="form-row">
+        <div class="form-group col-md-5">
+            <input asp-for="@Model.Num1" class="form-control">
+        </div>
+        <div class="form-group col-md-2">
+            <select asp-for="@Model.Operation" class="form-control">
+                <option selected value="0">+</option>
+                <option value="1">-</option>
+                <option value="2">*</option>
+                <option value="3">/</option>
+            </select>
+        </div>
+        <div class="form-group col-md-5">
+            <input asp-for="@Model.Num2" class="form-control">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Посчитать</button>
+</form>

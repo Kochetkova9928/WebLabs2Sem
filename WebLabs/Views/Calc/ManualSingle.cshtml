@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Manual Single";
+}
+
+<form asp-controller="Calc" asp-action="ManualSingle" method="post">
+    <label><h1>Manual</h1></label>
+    <div class="form-row">
+        <div class="form-group col-md-5">
+            <input type="number" class="form-control" name="num1">
+        </div>
+        <div class="form-group col-md-2">
+            <select name="operation" class="form-control">
+                <option selected value="0">+</option>
+                <option value="1">-</option>
+                <option value="2">*</option>
+                <option value="3">/</option>
+            </select>
+        </div>
+        <div class="form-group col-md-5">
+            <input type="number" class="form-control" name="num2">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Посчитать</button>
+</form>
