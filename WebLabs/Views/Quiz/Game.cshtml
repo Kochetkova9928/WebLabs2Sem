@@ -1,0 +1,25 @@
+﻿@model WebLabs.Models.QuizQuestion
+@{
+    ViewData["Title"] = "Game";
+}
+
+<form method="post" asp-action="Game">
+    <input type="hidden" asp-for="@Model.LastQuestion">
+    <div class="form-group row">
+        <label class="col-sm-1 col-form-label">@Model.Question</label>
+        <div class="col-sm-10">
+            <input type="number" asp-for="@Model.UserAns" class="form-control">
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-secondary"
+    onclick='document.getElementById("LastQuestion").value = false'>
+        Next
+    </button>
+
+    <button type="submit" class="btn btn-primary"
+    onclick='document.getElementById("LastQuestion").value = true'>
+        Finish
+    </button>
+</form>
+

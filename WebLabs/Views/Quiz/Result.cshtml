@@ -1,0 +1,26 @@
+﻿@model WebLabs.Models.Quiz
+@{
+    ViewData["Title"] = "Result";
+    var allAns = Model.QuizQuestion.Count;
+    var rightAns = Model.QuizQuestion.Count(x => x.CorrectAns == x.UserAns);
+    var rightP = (int)(100.0 * rightAns / allAns);
+    var wrongP = 100 - rightP;
+}
+
+<h1>Quiz results</h1>
+
+<h2>Right answers @rightAns out @allAns</h2>
+<br>
+<ul class="list-group">
+    @foreach (var question in Model.QuizQuestion)
+    {
+        if (question.UserAns == question.CorrectAns)
+        {
+            <li class="list-group-item list-group-item-success">@question.Question @question.UserAns</li>
+        }
+        else
+        {
+            <li class="list-group-item list-group-item-danger">@question.Question @question.UserAns (@question.CorrectAns)</li>
+        }
+    }
+</ul>
