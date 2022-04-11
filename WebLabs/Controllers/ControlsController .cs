@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using WebApplication.Models;
+using WebLabs.Models;
 
 namespace WebLabs.Controllers
 {
