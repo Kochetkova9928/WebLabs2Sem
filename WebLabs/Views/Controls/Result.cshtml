@@ -1,0 +1,22 @@
+﻿@model WebApplication.Models.ResultModel
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<dl class="row">
+    <dt class="col-3">
+        @Model.Property
+    </dt>
+    <dd class="col-9">
+        @if (Model.Title == "TextArea")
+        {
+        <textarea disabled>@Model.Value</textarea>
+        } else
+        {
+        <span class="badge badge-light">@Model.Value</span>
+        }
+    </dd>
+</dl>
+© 2022 GitHub, Inc.

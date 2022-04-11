@@ -1,0 +1,19 @@
+﻿@model WebLabs.Models.CheckBoxModel
+@{
+    ViewData["Title"] = "CheckBox";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-controller="Controls" asp-action="CheckBox" method="post">
+    <div class="form-group">
+        <div class="form-check">
+            <input asp-for="@Model.Checked" class="form-check-input">
+            <label class="form-check-label">
+                IsSelected
+            </label>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Отправить</button>
+</form>

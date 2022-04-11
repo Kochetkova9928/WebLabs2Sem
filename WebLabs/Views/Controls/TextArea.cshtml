@@ -1,0 +1,14 @@
+﻿@model WebApplication.Models.TextAreaModel
+@{
+    ViewData["Title"] = "TextArea";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-controller="Controls" asp-action="TextArea" method="post">
+    <div class="form-group">
+        <textarea asp-for="@Model.Text" class="form-control"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Отправить</button>
+</form>

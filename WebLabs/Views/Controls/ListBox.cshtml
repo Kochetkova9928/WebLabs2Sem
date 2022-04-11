@@ -1,0 +1,19 @@
+﻿@model WebLabs.Models.ListBoxModel
+@{
+    ViewData["Title"] = "ListBox";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-controller="Controls" asp-action="ListBox" method="post">
+    <div class="form-group">
+        <select multiple asp-for="@Model.Months" class="form-control">
+            @foreach (var month in Enum.GetValues(typeof(Months)))
+            {
+            <option value="@month">@month</option>
+            }
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Отправить</button>
+</form>

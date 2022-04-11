@@ -1,0 +1,14 @@
+﻿@model WebApplication.Models.TextBoxModel
+@{
+    ViewData["Title"] = "TextBox";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-controller="Controls" asp-action="TextBox" method="post">
+    <div class="form-group">
+        <input asp-for="@Model.Text" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Отправить</button>
+</form>

@@ -1,0 +1,19 @@
+﻿@model WebLabs.Models.DropDownListModel
+@{
+    ViewData["Title"] = "DropDownList";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-controller="Controls" asp-action="DropDownList" method="post">
+    <div class="form-group">
+        <select asp-for="@Model.Month" class="form-control">
+            @foreach (var month in Enum.GetValues(typeof(Months)))
+            {
+                <option value="@month">@month</option>
+            }
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Отправить</button>
+</form>

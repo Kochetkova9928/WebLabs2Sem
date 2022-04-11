@@ -1,0 +1,22 @@
+﻿@model WebApplication.Models.RadioModel
+@{
+    ViewData["Title"] = "Radio";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-controller="Controls" asp-action="Radio" method="post">
+    <div class="form-group">
+        @foreach (var month in Enum.GetValues(typeof(Months)))
+        {
+        <div class="form-check">
+            <input asp-for="@Model.Month" class="form-check-input" type="radio" value="@month">
+            <label class="form-check-label">
+                @month
+            </label>
+        </div>
+        }
+    </div>
+
+    <button type="submit" class="btn btn-primary">Отправить</button>
+</form>
