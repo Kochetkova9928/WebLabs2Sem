@@ -10,7 +10,7 @@
         <select asp-for="@Model.Month" class="form-control">
             @foreach (var month in Enum.GetValues(typeof(Months)))
             {
-                <option value="@month">@month</option>
+            <option value="@month">@month</option>
             }
         </select>
     </div>

@@ -1,0 +1,53 @@
+﻿@model WebLabs.Models.User
+@{
+    ViewData["Title"] = "Sign up result";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<dl class="row">
+    <dt class="col-3">
+        Имя
+    </dt>
+    <dd class="col-9">
+        <span class="badge badge-light">@Model.FirstName</span>
+    </dd>
+    <dt class="col-3">
+        Фамилия
+    </dt>
+    <dd class="col-9">
+        <span class="badge badge-light">@Model.LastName</span>
+    </dd>
+    <dt class="col-3">
+        День рожденья
+    </dt>
+    <dd class="col-9">
+        <span class="badge badge-light">@Model.Birthday.ToShortDateString()</span>
+    </dd>
+    <dt class="col-3">
+        Пол
+    </dt>
+    <dd class="col-9">
+        @if (Model.Gender == Gender.Male)
+        {
+            <span class="badge badge-light">Мужской</span>
+        }
+        else
+        {
+            <span class="badge badge-light">Женский</span>
+        }
+
+    </dd>
+    <dt class="col-3">
+        Email
+    </dt>
+    <dd class="col-9">
+        <span class="badge badge-light">@Model.Email</span>
+    </dd>
+    <dt class="col-3">
+        Пароль
+    </dt>
+    <dd class="col-9">
+        <span class="badge badge-light">@Model.Password</span>
+    </dd>
+</dl>

@@ -1,4 +1,4 @@
-﻿@model WebApplication.Models.ResultModel
+﻿@model WebLabs.Models.ResultModel
 @{
     ViewData["Title"] = Model.Title;
 }
@@ -12,11 +12,10 @@
     <dd class="col-9">
         @if (Model.Title == "TextArea")
         {
-        <textarea disabled>@Model.Value</textarea>
+            <textarea disabled>@Model.Value</textarea>
         } else
         {
-        <span class="badge badge-light">@Model.Value</span>
+            <span class="badge badge-light">@Model.Value</span>
         }
     </dd>
 </dl>
-© 2022 GitHub, Inc.

@@ -1,4 +1,4 @@
-﻿@model WebApplication.Models.RadioModel
+﻿@model WebLabs.Models.RadioModel
 @{
     ViewData["Title"] = "Radio";
 }
@@ -9,12 +9,12 @@
     <div class="form-group">
         @foreach (var month in Enum.GetValues(typeof(Months)))
         {
-        <div class="form-check">
-            <input asp-for="@Model.Month" class="form-check-input" type="radio" value="@month">
-            <label class="form-check-label">
-                @month
-            </label>
-        </div>
+            <div class="form-check">
+                <input asp-for="@Model.Month" class="form-check-input" type="radio" value="@month">
+                <label class="form-check-label">
+                    @month
+                </label>
+            </div>
         }
     </div>
 

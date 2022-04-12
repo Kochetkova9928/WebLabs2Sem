@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+п»їusing Microsoft.AspNetCore.Mvc;
 using System;
 using System.ComponentModel.DataAnnotations;
 
@@ -6,26 +6,26 @@ namespace WebLabs.Models
 {
     public class SignUpSecondViewModel
     {
-        [Required(ErrorMessage = "Не указано имя")]
+        [Required(ErrorMessage = "РќРµ СѓРєР°Р·Р°РЅРѕ РёРјСЏ")]
         public string FirstName { get; set; }
 
-        [Required(ErrorMessage = "Не указана фамилия")]
+        [Required(ErrorMessage = "РќРµ СѓРєР°Р·Р°РЅР° С„Р°РјРёР»РёСЏ")]
         public string LastName { get; set; }
 
-        [Required(ErrorMessage = "Не указана дата рождения")]
+        [Required(ErrorMessage = "РќРµ СѓРєР°Р·Р°РЅР° РґР°С‚Р° СЂРѕР¶РґРµРЅРёСЏ")]
         public DateTime Birthday { get; set; }
 
-        [Required(ErrorMessage = "Не указан пол")]
+        [Required(ErrorMessage = "РќРµ СѓРєР°Р·Р°РЅ РїРѕР»")]
         public Gender Gender { get; set; }
 
         [EmailAddress]
-        [Required(ErrorMessage = "Не указан email")]
+        [Required(ErrorMessage = "РќРµ СѓРєР°Р·Р°РЅ email")]
         public string Email { get; set; }
 
-        [Required(ErrorMessage = "Не указан пароль")]
+        [Required(ErrorMessage = "РќРµ СѓРєР°Р·Р°РЅ РїР°СЂРѕР»СЊ")]
         public string Password { get; set; }
 
-        [Compare("Password", ErrorMessage = "Пароли не совпадают")]
+        [Compare("Password", ErrorMessage = "РџР°СЂРѕР»Рё РЅРµ СЃРѕРІРїР°РґР°СЋС‚")]
         public string ConfirmPassword { get; set; }
         public bool IsRemember { get; set; }
     }

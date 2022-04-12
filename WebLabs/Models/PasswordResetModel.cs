@@ -1,11 +1,11 @@
-using System.ComponentModel.DataAnnotations;
+Ôªøusing System.ComponentModel.DataAnnotations;
 
 namespace WebLabs.Models
 {
     public class PasswordResetModel
     {
         [EmailAddress]
-        [Required(ErrorMessage = "ÕÂ ÛÍ‡Á‡Ì email")]
+        [Required(ErrorMessage = "–ù–µ —É–∫–∞–∑–∞–Ω email")]
         public string Email { get; set; }
     }
 }

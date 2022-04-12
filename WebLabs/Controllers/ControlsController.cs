@@ -1,10 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using WebLabs.Models;
 
 namespace WebLabs.Controllers
@@ -28,7 +22,6 @@ namespace WebLabs.Controllers
             return View("Result", new ResultModel(model));
         }
 
-
         [HttpGet]
         public IActionResult TextArea()
         {
@@ -40,7 +33,6 @@ namespace WebLabs.Controllers
         {
             return View("Result", new ResultModel(model));
         }
-
 
         [HttpGet]
         public IActionResult CheckBox()
@@ -54,7 +46,6 @@ namespace WebLabs.Controllers
             return View("Result", new ResultModel(model));
         }
 
-
         [HttpGet]
         public IActionResult Radio()
         {
@@ -67,7 +58,6 @@ namespace WebLabs.Controllers
             return View("Result", new ResultModel(model));
         }
 
-
         [HttpGet]
         public IActionResult DropDownList()
         {
@@ -79,7 +69,6 @@ namespace WebLabs.Controllers
         {
             return View("Result", new ResultModel(model));
         }
-
 
         [HttpGet]
         public IActionResult ListBox()

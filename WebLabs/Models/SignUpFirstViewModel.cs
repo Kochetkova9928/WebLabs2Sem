@@ -1,20 +1,20 @@
-using System;
+п»їusing System;
 using System.ComponentModel.DataAnnotations;
 
 namespace WebLabs.Models
 {
     public class SignUpFirstViewModel
     {
-        [Required(ErrorMessage = "Не указано имя")]
+        [Required (ErrorMessage = "РќРµ СѓРєР°Р·Р°РЅРѕ РёРјСЏ")]
         public string FirstName { get; set; }
 
-        [Required(ErrorMessage = "Не указана фамилия")]
+        [Required (ErrorMessage = "РќРµ СѓРєР°Р·Р°РЅР° С„Р°РјРёР»РёСЏ")]
         public string LastName { get; set; }
 
-        [Required(ErrorMessage = "Не указан день рожденья")]
+        [Required (ErrorMessage = "РќРµ СѓРєР°Р·Р°РЅ РґРµРЅСЊ СЂРѕР¶РґРµРЅСЊСЏ")]
         public DateTime Birthday { get; set; }
 
-        [Required(ErrorMessage = "Не указан пол")]
+        [Required (ErrorMessage = "РќРµ СѓРєР°Р·Р°РЅ РїРѕР»")]
         public Gender Gender { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-namespace WebLabs.Models
+﻿namespace WebLabs.Models
 {
     public class TextBoxModel
     {
