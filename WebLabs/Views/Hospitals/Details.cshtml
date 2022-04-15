@@ -1,0 +1,61 @@
+﻿@model WebLabs.Models.Hospital
+
+@{
+    ViewData["Title"] = "Details";
+    var linkTemplate = "<a href='TLink'>TName</a>";
+    var rooms = Model.Rooms.Select(x => linkTemplate
+                        .Replace("TLink", Url.Action("Details", "Rooms", new { Id = x.Id }))
+                        .Replace("TName", x.Number))
+                        .ToList();
+    var doctors = Model.Doctors.Select(x => linkTemplate
+                        .Replace("TLink", Url.Action("Details", "Doctors", new { Id = x.Id }))
+                        .Replace("TName", x.Name))
+                        .ToList();
+    var patients = Model.Patients.Select(x => linkTemplate
+                        .Replace("TLink", Url.Action("Details", "Patients", new { Id = x.Id }))
+                        .Replace("TName", x.Name))
+                        .ToList();
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Hospital</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rooms)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.Raw(string.Join(", ", rooms))
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Doctors)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.Raw(string.Join(", ", doctors))
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Patients)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.Raw(string.Join(", ", patients))
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
